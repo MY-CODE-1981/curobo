@@ -208,27 +208,89 @@
     <axis xyz="1 0 0"/>
     <limit effort="100" lower="-3.14158" upper="3.14158" velocity="1.0"/>
   </joint>
-
+  <!-- vx300s_left_gripper_prop_link -->
+  <link name="vx300s_left_gripper_prop_link">
+    <visual>
+      <origin rpy="0 0 1.5708" xyz="-0.0685 0 0"/>
+      <geometry>
+        <mesh filename="meshes/vx300s_8_gripper_prop.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 1.5708" xyz="-0.0685 0 0"/>
+      <geometry>
+        <mesh filename="meshes/vx300s_8_gripper_prop.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.008009"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="4.2979e-06" ixy="0" ixz="0" iyy="2.8868e-06" iyz="0" izz="1.5314e-06"/>
+    </inertial>
+  </link>
   <joint name="vx300s_left_gripper" type="revolute">
     <parent link="vx300s_left_gripper_link"/>
-    <child link="tool0"/>
+    <child link="vx300s_left_gripper_prop_link"/>
     <origin rpy="0 0 0" xyz="0.0485 0 0"/>
     <axis xyz="1 0 0"/>
     <limit effort="30" lower="-0.001" upper="0.001" velocity="1.0"/>
   </joint>
-  <link name="tool0">
-    <collision>
-      <origin xyz="0 0 0" />
+  <!-- Left fingers -->
+  <link name="vx300s_left_left_finger_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="0.01 0.01 0.01"/>
+        <mesh filename="meshes/vx300s_10_custom_finger_left.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/vx300s_10_custom_finger_left.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.001"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5"/>
+      <mass value="0.0348"/>
+      <origin xyz="0.0173 -0.006 0"/>
+      <inertia ixx="2.48e-05" ixy="0" ixz="0" iyy="1.417e-05" iyz="0" izz="1.208e-05"/>
     </inertial>
   </link>
-
+  <joint name="vx300s_left_left_finger" type="prismatic">
+    <parent link="vx300s_left_gripper_link"/>
+    <child link="vx300s_left_left_finger_link"/>
+    <!-- <origin xyz="0 0 0" rpy="0 0 0"/> -->
+    <origin rpy="0 1.57 0" xyz="0.0737 -0.031 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" lower="0.0" upper="0.0605" velocity="1.0"/>
+  </joint>
+  <link name="vx300s_left_right_finger_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/vx300s_10_custom_finger_right.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="3.14 1.57 0" xyz="0.0737 0 0.052"/>
+      <geometry>
+        <mesh filename="meshes/vx300s_10_custom_finger_right.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0348"/>
+      <origin xyz="0.0173 0.006 0"/>
+      <inertia ixx="2.48e-05" ixy="0" ixz="0" iyy="1.417e-05" iyz="0" izz="1.208e-05"/>
+    </inertial>
+  </link>
+  <joint name="vx300s_left_right_finger" type="prismatic">
+    <parent link="vx300s_left_gripper_link"/>
+    <child link="vx300s_left_right_finger_link"/>
+    <!-- <origin xyz="0 0 0" rpy="0 0 0"/> -->
+    <origin rpy="0 1.57 0" xyz="0.0737 0.031 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" lower="-0.0605" upper="-0.0" velocity="1.0"/>
+    <mimic joint="vx300s_left_left_finger" multiplier="-1.0" offset="0.0"/>
+  </joint>
+  
 </robot>
 

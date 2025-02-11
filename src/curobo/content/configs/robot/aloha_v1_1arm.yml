@@ -8,10 +8,10 @@ robot_cfg:
     usd_robot_root: "bimanual_viperx_transfer_cube"
 
     base_link: "base_link"
-    ee_link: "tool0"
+    ee_link: "vx300s_left_gripper_link"
 
     link_names:
-      - "tool0"
+      - "vx300s_left_gripper_link"
 
     collision_link_names:
       - "vx300s_left_base"
@@ -20,7 +20,7 @@ robot_cfg:
       - "vx300s_left_upper_forearm_link"
       - "vx300s_left_lower_forearm_link"
       - "vx300s_left_wrist_link"
-      - "tool0"
+      - "vx300s_left_gripper_link"
 
     collision_spheres: "spheres/aloha_v1_1arm.yml"
     collision_sphere_buffer: 0.005
@@ -47,7 +47,7 @@ robot_cfg:
       vx300s_left_upper_forearm_link: 0.01
       vx300s_left_lower_forearm_link: 0.01
       vx300s_left_wrist_link: 0.01
-      tool0: 0.01
+      vx300s_left_gripper_link: 0.01
 
     mesh_link_names:
       - "vx300s_left_base"
@@ -56,8 +56,7 @@ robot_cfg:
       - "vx300s_left_upper_forearm_link"
       - "vx300s_left_lower_forearm_link"
       - "vx300s_left_wrist_link"
-      - "tool0"
-
+      - "vx300s_left_gripper_link"
     cspace:
       joint_names:
         - "vx300s_left_waist"
@@ -75,6 +74,7 @@ robot_cfg:
         - 0.1
         - 0.0
         - 0.0
+
       null_space_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
       cspace_distance_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
       max_jerk: 500.0

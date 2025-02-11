@@ -28,6 +28,15 @@ collision_spheres:
   vx300s_left_gripper_link:
     - center: [0.0, 0.0, 0.0]
       radius: 0.01
-  tool0:
-    - center: [0, 0, 0.]
+
+  vx300s_left_gripper_prop_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.01
+
+  vx300s_left_left_finger_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.01
+
+  vx300s_left_right_finger_link:
+    - center: [0.0, 0.0, 0.0]
       radius: 0.01
