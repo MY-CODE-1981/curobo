@@ -1,0 +1,103 @@
+robot: "aloha_v1"
+
+collision_spheres:
+
+  jigu:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.15
+  
+  mount:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.15
+
+  pole:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.1
+
+  table:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.25
+
+  vx300s_left_base:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.05
+
+  vx300s_left_shoulder_link:
+    - center: [0.0, 0.0, 0.02]
+      radius: 0.05
+
+  vx300s_left_upper_arm_link:
+    - center: [0.04, 0.0, 0.15]
+      radius: 0.06
+
+  vx300s_left_upper_forearm_link:
+    - center: [0.1, 0.0, 0.0]
+      radius: 0.04
+
+  vx300s_left_lower_forearm_link:
+    - center: [0.05, 0.0, 0.0]
+      radius: 0.04
+
+  vx300s_left_wrist_link:
+    - center: [0.02, 0.0, 0.0]
+      radius: 0.03
+
+  vx300s_left_gripper_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.03
+
+  vx300s_left_gripper_prop_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.02
+
+  vx300s_left_left_finger_link:
+    - center: [0.01, -0.02, 0.0]
+      radius: 0.01
+
+  vx300s_left_right_finger_link:
+    - center: [0.01, 0.02, 0.0]
+      radius: 0.01
+
+  vx300s_right_base:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.05
+
+  vx300s_right_shoulder_link:
+    - center: [0.0, 0.0, 0.02]
+      radius: 0.05
+
+  vx300s_right_upper_arm_link:
+    - center: [0.04, 0.0, 0.15]
+      radius: 0.06
+
+  vx300s_right_upper_forearm_link:
+    - center: [0.1, 0.0, 0.0]
+      radius: 0.04
+
+  vx300s_right_lower_forearm_link:
+    - center: [0.05, 0.0, 0.0]
+      radius: 0.04
+
+  vx300s_right_wrist_link:
+    - center: [0.02, 0.0, 0.0]
+      radius: 0.03
+
+  vx300s_right_gripper_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.03
+
+  vx300s_right_gripper_prop_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.02
+
+  vx300s_right_left_finger_link:
+    - center: [0.01, -0.02, 0.0]
+      radius: 0.01
+
+  vx300s_right_right_finger_link:
+    - center: [0.01, 0.02, 0.0]
+      radius: 0.01
+
+  charuco_dmy_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.05

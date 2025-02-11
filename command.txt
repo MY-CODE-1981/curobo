@@ -1,0 +1,18 @@
+https://curobo.org/get_started/1_install_instructions.html
+のInstall for use in Isaac Simに沿って環境構築
+
+各モデルのmeshをgitからダウンロードしなおす。cloneしたものは何故かファイルが壊れている
+
+・フランカの場合
+set_isaac420
+omni_python examples/isaac_sim/motion_gen_reacher.py
+
+・ur10の場合
+set_isaac420
+omni_python examples/isaac_sim/multi_arm_reacher.py
+
+・alohaの場合
+set_isaac420
+omni_python examples/isaac_sim/multi_arm_reacher_aloha2.py
+omni_python examples/isaac_sim/multi_arm_reacher_aloha2_1arm.py
+omni_python examples/isaac_sim/motion_gen_reacher_aloha.py
