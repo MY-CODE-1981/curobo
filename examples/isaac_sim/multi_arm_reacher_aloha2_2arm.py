@@ -41,7 +41,7 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "--robot", type=str, default="aloha_v1_1arm.yml", help="robot configuration to load"
+    "--robot", type=str, default="aloha_v1_2arm.yml", help="robot configuration to load"
 )
 args = parser.parse_args()
 
